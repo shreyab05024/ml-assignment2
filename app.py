@@ -42,12 +42,12 @@ SCALER_FILE = "scaler.pkl"
 # Expected feature list for Breast Cancer dataset (30 features)
 # IMPORTANT: Your uploaded CSV must have these exact column names for safest results.
 EXPECTED_FEATURES = [
-    "mean radius","mean texture","mean perimeter","mean area","mean smoothness",
-    "mean compactness","mean concavity","mean concave points","mean symmetry","mean fractal dimension",
-    "radius error","texture error","perimeter error","area error","smoothness error",
-    "compactness error","concavity error","concave points error","symmetry error","fractal dimension error",
-    "worst radius","worst texture","worst perimeter","worst area","worst smoothness",
-    "worst compactness","worst concavity","worst concave points","worst symmetry","worst fractal dimension"
+    "Mean Radius","Mean Texture","Mean Perimeter","Mean Area","Mean Smoothness",
+    "Mean Compactness","Mean Concavity","Mean Concave Points","Mean symmetry","Mean Fractal Dimension",
+    "Radius Error","Texture Error","Perimeter Error","Area Error","Smoothness Error",
+    "Compactness Error","Concavity Error","Concave Points Error","symmetry Error","Fractal Dimension Error",
+    "Worst Radius","Worst Texture","Worst Perimeter","Worst Area","Worst Smoothness",
+    "Worst Compactness","Worst Concavity","Worst Concave Points","Worst symmetry","Worst Fractal Dimension"
 ]
 
 
@@ -135,7 +135,7 @@ def validate_and_prepare_features(df: pd.DataFrame):
 try:
     scaler, models = load_artifacts()
 except Exception as e:
-    st.error(str(e))
+    st.Error(str(e))
     st.stop()
 
 # -------------------------------------------------------------------
@@ -180,7 +180,7 @@ with right:
     try:
         df = pd.read_csv(uploaded)
     except Exception as e:
-        st.error(f"Could not read CSV: {e}")
+        st.Error(f"Could not read CSV: {e}")
         st.stop()
 
     y_true = None
@@ -196,7 +196,7 @@ with right:
     X, missing_cols, extra_cols = validate_and_prepare_features(X_df)
 
     if missing_cols:
-        st.error(
+        st.Error(
             "Uploaded CSV is missing required feature columns:\n\n"
             + ", ".join(missing_cols[:20])
             + (" ..." if len(missing_cols) > 20 else "")
