@@ -43,11 +43,11 @@ SCALER_FILE = "scaler.pkl"
 # IMPORTANT: Your uploaded CSV must have these exact column names for safest results.
 EXPECTED_FEATURES = [
     "Mean Radius","Mean Texture","Mean Perimeter","Mean Area","Mean Smoothness",
-    "Mean Compactness","Mean Concavity","Mean Concave Points","Mean symmetry","Mean Fractal Dimension",
+    "Mean Compactness","Mean Concavity","Mean Concave Points","Mean Symmetry","Mean Fractal Dimension",
     "Radius Error","Texture Error","Perimeter Error","Area Error","Smoothness Error",
-    "Compactness Error","Concavity Error","Concave Points Error","symmetry Error","Fractal Dimension Error",
+    "Compactness Error","Concavity Error","Concave Points Error","Symmetry Error","Fractal Dimension Error",
     "Worst Radius","Worst Texture","Worst Perimeter","Worst Area","Worst Smoothness",
-    "Worst Compactness","Worst Concavity","Worst Concave Points","Worst symmetry","Worst Fractal Dimension"
+    "Worst Compactness","Worst Concavity","Worst Concave Points","Worst Symmetry","Worst Fractal Dimension"
 ]
 
 
